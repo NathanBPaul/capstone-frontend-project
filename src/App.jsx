@@ -7,6 +7,8 @@ import Expen from './components/Expen'
 import AddExpensePage from './components/AddExpensePage'
 import Navbar from './Navbar'
 import {BrowserRouter , Route, Routes} from 'react-router-dom'
+import Chart from './Chart'
+
 function App() {
   const [count, setCount] = useState(0)
 
@@ -19,6 +21,7 @@ function App() {
       <Route path='/add' element={<AddExpensePage/>}/>
     </Routes>
      </BrowserRouter>
+     <Chart/>
     </>
   )
 }
