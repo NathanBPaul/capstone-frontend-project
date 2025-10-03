@@ -15,7 +15,7 @@ const AddExpensePage = () => {
     async function submitExpense(e){
         e.preventDefault();
         try {
-           await axios.post("http://localhost:5000/expenses",{
+           await axios.post("http://localhost:3000/expenses",{
             ...expense
            }) 
            console.log("Expense added successfully",expense);

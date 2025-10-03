@@ -54,7 +54,7 @@ const ExpenseList = () => {
 ];
         async function fetchExpences(){
             try {
-                const data = await axios.get("http://localhost:5000/expenses");
+                const data = await axios.get("http://localhost:3000/expenses");
                 setExpences(data.data);
                 console.log(data);
             } catch (error) {
@@ -127,12 +127,10 @@ const ExpenseList = () => {
     </table>
     <ExpenseTotal total={total}/>
     <div>
-        <ResponsiveContainer width="500px" height="500px">
             
-      <BarChart width={150} height={40} data={data1}>
+      <BarChart width={400} height={400} data={data1}>
         <Bar dataKey="uv" fill="#8884d8" />
       </BarChart>
-    </ResponsiveContainer>
     </div>
 </>
   )

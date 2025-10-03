@@ -1,0 +1,200 @@
+/* ======================================
+   RESET + BASE
+====================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #f9fafb, #eef2ff);
+  color: #111827;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ======================================
+   GLOBAL LAYOUT
+====================================== */
+#root {
+  width: 100%;
+  max-width: 900px;
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ======================================
+   FORMS (AddExpense + Search)
+====================================== */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+form input,
+form select {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  background: #f9fafb;
+}
+
+form input:focus,
+form select:focus {
+  border-color: #6366f1;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+  outline: none;
+}
+
+/* Submit Buttons */
+form input[type="submit"] {
+  background: linear-gradient(90deg, #6366f1, #3b82f6);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(99, 102, 241, 0.3);
+}
+
+/* ======================================
+   TABLE (Expense List)
+====================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+}
+
+th {
+  background: #f3f4f6;
+  font-weight: 700;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+td {
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  color: #111827;
+}
+
+tr:hover td {
+  background: #f9fafb;
+}
+
+/* ======================================
+   TOTAL SECTION
+====================================== */
+div {
+  font-size: 1rem;
+}
+
+div:has(> table) + div {
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-align: right;
+  color: #4f46e5;
+  margin-bottom: 20px;
+}
+
+/* ======================================
+   CHARTS
+====================================== */
+.recharts-wrapper {
+  margin: 0 auto;
+  background: linear-gradient(145deg, #eef2ff, #f9fafb);
+  border-radius: 20px;
+  box-shadow: inset 0 6px 20px rgba(99, 102, 241, 0.05);
+  padding: 20px;
+}
+
+/* ======================================
+   ADD EXPENSE FORM STYLING
+====================================== */
+#add-expense {
+  margin-bottom: 40px;
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.05);
+}
+
+/* ======================================
+   SELECT DROPDOWN
+====================================== */
+select {
+  background: #f9fafb;
+  cursor: pointer;
+}
+
+select:hover {
+  border-color: #818cf8;
+}
+
+/* ======================================
+   RESPONSIVE DESIGN
+====================================== */
+@media (max-width: 768px) {
+  #root {
+    padding: 20px;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  form input,
+  form select {
+    width: 100%;
+  }
+}
+
+/* ======================================
+   SMOOTH ENHANCEMENTS
+====================================== */
+::placeholder {
+  color: #9ca3af;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
